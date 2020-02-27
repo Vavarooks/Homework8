@@ -14,7 +14,7 @@ const questions = [
       name:"github",
       message:"Enter Gihub Username?"},
       {type:"list",
-      choices: ["red","blue", "yellow", "green", "purple", "orange"],
+      choices: ["red","blue","yellow","green","purple","orange", "magenta"],
       name:"favColor",
       message:"Enter favorite color?"}
 
@@ -23,6 +23,8 @@ const questions = [
 function writeToFile(data) {
   fs.writeFileSync("index.html", data)
 }
+
+
 
 function init() {
     inquirer.prompt(questions)
@@ -42,8 +44,10 @@ function init() {
             publicRepo: apiresult.data.public_repos,
             bio: apiresult.data.bio,
             image: apiresult.data.avatar_url,
+            url: apiresult.data.url,
             blog: apiresult.data.blog,
-            location: apiresult.data.location
+            location: apiresult.data.location,
+            stars: apiresult.data.starred_url,
         }
         return generatehtml(userdata);
     })

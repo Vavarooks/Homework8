@@ -1,29 +1,3 @@
-const colors = {
-    green: {
-      wrapperBackground: "#E6E1C3",
-      headerBackground: "#C1C72C",
-      headerColor: "black",
-      photoBorderColor: "#black"
-    },
-    blue: {
-      wrapperBackground: "#5F64D3",
-      headerBackground: "#26175A",
-      headerColor: "white",
-      photoBorderColor: "#73448C"
-    },
-    pink: {
-      wrapperBackground: "#879CDF",
-      headerBackground: "#FF8374",
-      headerColor: "white",
-      photoBorderColor: "#FEE24C"
-    },
-    red: {
-      wrapperBackground: "#DE9967",
-      headerBackground: "#870603",
-      headerColor: "white",
-      photoBorderColor: "white"
-    }
-  };
   
   function generateHTML(data) {
     return `<!DOCTYPE html>
@@ -40,24 +14,38 @@ const colors = {
         .card {
           background-color: ${data.color};
         }
+        .card-body{
+          color: seashell;
+          font-size: 38px;
+        }
         </style>
         <body>
-        
-    
+         
+<div class="jumbotron">
+  <div class="display-4">
  <div class="container">
      <div class="row">
-         <div class="card">
-         <img src="${data.image}">
-            <h1>Name:${data.name}</h1>
-            <h2>Username:${data.username}</h2>
-            <p>Bio:${data.bio}</p>
-            <p>Following:${data.following}</p>
-            <p>Followers:${data.followers}</p>
-            <p>Public Repo:${data.publicRepo}</p>
-         </div>
+     <div class="card width: 45rem;">
+     <img src="${data.image}" class="card-img-top">
+     <div class="card-body">
+            <h1>Name: ${data.name}</h1>
+            <h2>Username: ${data.username}</h2>
+            <h3>Bio: ${data.bio}</h3>
+            <br>
+            <p>Following: ${data.following}</p>
+            <p>Followers: ${data.followers}</p>
+            <p>Public Repo: ${data.publicRepo}</p>
+            <br>
+            <a href="${data.blog}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Blog <i class="fas fa-blog"></i></a>
+            <a href="${data.url}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">GitHub <i class="fab fa-github"></i>
+            </a>
+            <p>Location: ${data.loctaion} <i class="fas fa-compass"></i></p>
+      </div>
+      </div>
      </div>
  </div>
-    
+ </div>
+ </div>   
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
