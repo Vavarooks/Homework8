@@ -16,7 +16,11 @@
         }
         .card-body{
           color: seashell;
-          font-size: 38px;
+          font-size: large;
+          font-family: fantasy;
+        }
+        a{
+          font-size: 40px;
         }
         </style>
         <body>
@@ -31,15 +35,17 @@
             <h1>Name: ${data.name}</h1>
             <h2>Username: ${data.username}</h2>
             <h3>Bio: ${data.bio}</h3>
+            <h3>Location: ${data.loctaion} <i class="fas fa-compass"></i></h3>
             <br>
             <p>Following: ${data.following}</p>
             <p>Followers: ${data.followers}</p>
             <p>Public Repo: ${data.publicRepo}</p>
+            <p>Stars: ${data.star}</p>
             <br>
             <a href="${data.blog}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Blog <i class="fas fa-blog"></i></a>
             <a href="${data.url}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">GitHub <i class="fab fa-github"></i>
             </a>
-            <p>Location: ${data.loctaion} <i class="fas fa-compass"></i></p>
+            
       </div>
       </div>
      </div>

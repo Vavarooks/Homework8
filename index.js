@@ -47,7 +47,7 @@ function init() {
             url: apiresult.data.url,
             blog: apiresult.data.blog,
             location: apiresult.data.location,
-            stars: apiresult.data.starred_url,
+            stars: apiresult.data.public_gits,
         }
         return generatehtml(userdata);
     })
