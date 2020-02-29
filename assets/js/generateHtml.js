@@ -40,7 +40,7 @@
             <p>Following: ${data.following}</p>
             <p>Followers: ${data.followers}</p>
             <p>Public Repo: ${data.publicRepo}</p>
-            <p>Stars: ${data.star}</p>
+            <p>Stars: ${data.stars}</p>
             <br>
             <a href="${data.blog}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Blog <i class="fas fa-blog"></i></a>
             <a href="${data.url}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">GitHub <i class="fab fa-github"></i>
