@@ -1,6 +1,6 @@
-  
-  function generateHTML(data) {
-    return `<!DOCTYPE html>
+
+function generateHTML(data) {
+  return `<!DOCTYPE html>
   <html lang="en">
      <head>
         <meta charset="UTF-8" />
@@ -14,6 +14,7 @@
         .card {
           background-color: ${data.color};
         }
+
         .card-body{
           color: seashell;
           font-size: large;
@@ -35,15 +36,15 @@
             <h1>Name: ${data.name}</h1>
             <h2>Username: ${data.username}</h2>
             <h3>Bio: ${data.bio}</h3>
-            <h3>Location: ${data.loctaion} <i class="fas fa-compass"></i></h3>
+            <h3>Location: ${data.location} <i class="fas fa-compass"></i></h3>
             <br>
             <p>Following: ${data.following}</p>
             <p>Followers: ${data.followers}</p>
-            <p>Public Repo: ${data.publicRepo}</p>
-            <p>Stars: ${data.stars}</p>
+            <p>Public Repos: ${data.publicRepo}</p>
+            <p>Stared Repos: ${data.stars}</p>
             <br>
-            <a href="${data.blog}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Blog <i class="fas fa-blog"></i></a>
-            <a href="${data.url}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">GitHub <i class="fab fa-github"></i>
+            <a href="${data.blog}" target ="_blank" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" ${data.noblog}>Blog <i class="fas fa-blog"></i></a>
+            <a href="${data.url}" target ="_blank" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">GitHub <i class="fab fa-github"></i>
             </a>
             
       </div>
@@ -59,4 +60,4 @@
 </body>
 </html>`}
 
-module.exports= generateHTML;
+module.exports = generateHTML;
